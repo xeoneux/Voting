@@ -10,7 +10,10 @@ export default React.createClass({
         {
           this.getPair().map(entry => {
             return (
-              <button key={entry}>
+              <button key={entry}
+                onClick={
+                  () => this.props.vote(entry)
+                }>
                 <h1>{entry}</h1>
               </button>
             );
