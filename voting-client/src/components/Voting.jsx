@@ -1,9 +1,11 @@
 import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 import Winner from './Winner.jsx';
 import Vote from './Vote.jsx';
 
 export default React.createClass({
+  mixins: [PureRenderMixin],
   getPair: function () {
     return this.props.pair || [];
   },
