@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import Winner from './Winner.jsx';
 import Vote from './Vote.jsx';
-import * as actionCreators from '../action_creators.jsx';
+import * as actionCreators from '../action_creators';
 
 export const Voting = React.createClass({
   mixins: [PureRenderMixin],

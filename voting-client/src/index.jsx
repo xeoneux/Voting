@@ -9,7 +9,7 @@ import reducer from './reducer';
 import App from './components/App.jsx';
 import {VotingContainer} from './components/Voting.jsx';
 import {ResultsContainer} from './components/Results.jsx';
-import {setState} from './action_creators.jsx';
+import {setState} from './action_creators';
 import remoteActionMiddleware from './remote_action_middleware';
 
 const createStoreWithMiddleware = applyMiddleware(
