@@ -15,7 +15,7 @@ import remoteActionMiddleware from './remote_action_middleware';
 const createStoreWithMiddleware = applyMiddleware(
   remoteActionMiddleware
 )(createStore);
-const store = createStoreWithMiddleware(reducer);
+const store = createStoreWithMiddleware(socket);
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`);
 socket.on('state', state =>
