@@ -9,6 +9,7 @@ import reducer from './reducer';
 import App from './components/App.jsx';
 import {VotingContainer} from './components/Voting.jsx';
 import {ResultsContainer} from './components/Results.jsx';
+import {setState} from './action_creators';
 
 const store = createStore(reducer);
 store.dispatch({
@@ -23,7 +24,7 @@ store.dispatch({
 
 const socket = io(`${location.protocol}//${location.hostname}:8090`);
 socket.on('state', state =>
-  store.dispatch({ type: 'SET_STATE', state })
+  store.dispatch(setState(state))
 );
 
 const routes = (
