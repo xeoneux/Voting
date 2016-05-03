@@ -9,7 +9,7 @@ import reducer from './reducer';
 import App from './components/App.jsx';
 import {VotingContainer} from './components/Voting.jsx';
 import {ResultsContainer} from './components/Results.jsx';
-import {setState} from './action_creators';
+import {setState} from './action_creators.jsx';
 
 const store = createStore(reducer);
 store.dispatch({
